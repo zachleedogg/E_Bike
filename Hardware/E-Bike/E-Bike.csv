@@ -1,0 +1,15 @@
+Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet,Part Number
+1,7,"C1, C10, C11, C12, C15, C16, C17",10n,Device:C,Capacitor_SMD:C_0603_1608Metric,https://datasheets.avx.com/X7RDielectric.pdf,06035C103JAT2A
+2,1,C2,1u,Device:C,Capacitor_SMD:C_1206_3216Metric,https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_midvoltage_en.pdf?ref_disty=digikey,C3216X7R2A105K160AA
+3,3,"C4, C6, C9",100n,Device:C,Capacitor_SMD:C_0603_1608Metric,http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2019/08/26/CL10B104KB8WPND-19.pdf,CL10B104KB8WPND
+4,1,C5,10u,Device:C,Capacitor_SMD:C_1206_3216Metric,https://product.tdk.com/info/en/catalog/datasheets/mlcc_automotive_soft_en.pdf?ref_disty=digikey,CGA5L1X7R1E106K160AE
+5,3,"C7, C13, C14",1u,Device:C,Capacitor_SMD:C_0603_1608Metric,http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B105KOFVPNE.jsp,CL21B105KOFVPNE
+6,1,C8,4u7,Device:CP,Capacitor_SMD:CP_Elec_4x5.4,https://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1151.pdf,EEE-HA1E4R7R
+11,1,L1,150u,Device:L,Inductor_SMD:L_Bourns-SRN4018,https://www.bourns.com/docs/Product-Datasheets/SRN4026.pdf,SRN4026-151M
+12,1,R1,69.8k,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf,RMCF0603FT69K8
+13,1,R3,576k,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,https://www.seielect.com/catalog/sei-rncf.pdf,RNCF0603DTC576K
+14,1,R4,49k9,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf,ERJ-3EKF4992V
+15,6,"R5, R6, R7, R8, R9, R10",10k,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204-3&DocType=DS&DocLang=English,CRGCQ0603F10K
+16,1,U1,MAX17552AUB+,E-Bike:MAX17552,Package_SO:MSOP-10_3x3mm_P0.5mm,https://datasheets.maximintegrated.com/en/ds/MAX17552.pdf,MAX17552AUB+
+17,1,U2,ATtiny85-20SU,MCU_Microchip_ATtiny:ATtiny85-20SU,Package_SO:SOIJ-8_5.3x5.3mm_P1.27mm,http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf,ATtiny85-20SU
+18,1,U3,TPS76350,Regulator_Linear:TPS76350,Package_TO_SOT_SMD:SOT-23-5,http://www.ti.com/lit/ds/symlink/tps763.pdf,TPS76350-Q1
