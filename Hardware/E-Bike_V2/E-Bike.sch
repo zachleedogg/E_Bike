@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:E-Bike-cache
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1128,7 +1129,67 @@ F 0 "U4" H 2144 5596 50  0000 L CNN
 F 1 "INA290" H 2144 5505 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-353_SC-70-5" H 1900 6300 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/ina290-q1.pdf?ts=1624044330872&ref_url=https%253A%252F%252Fwww.ti.com%252Famplifier-circuit%252Fcurrent-sense%252Fanalog-output%252Fproducts.html" H 1900 6300 50  0001 C CNN
+F 4 "INA290A4QDCKRQ1" H 1700 5550 50  0001 C CNN "Part Number"
 	1    1700 5550
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J5
+U 1 1 61D1326B
+P 10450 1000
+F 0 "J5" H 10530 992 50  0000 L CNN
+F 1 "Conn_01x04" H 10530 901 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 10450 1000 50  0001 C CNN
+F 3 "~" H 10450 1000 50  0001 C CNN
+	1    10450 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J6
+U 1 1 61D132ED
+P 10450 1600
+F 0 "J6" H 10530 1592 50  0000 L CNN
+F 1 "Conn_01x04" H 10530 1501 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 10450 1600 50  0001 C CNN
+F 3 "~" H 10450 1600 50  0001 C CNN
+	1    10450 1600
+	1    0    0    -1  
+$EndComp
+Text Label 1400 4300 0    50   ~ 0
+VBUS_R
+Text Label 9900 1500 0    50   ~ 0
+VBUS_R
+Connection ~ 10250 1600
+Wire Wire Line
+	10250 1600 10250 1500
+Connection ~ 10250 1700
+Wire Wire Line
+	10250 1700 10250 1600
+Wire Wire Line
+	10250 1800 10250 1700
+Wire Wire Line
+	9900 1500 10250 1500
+Connection ~ 10250 1500
+$Comp
+L power:VBUS #PWR033
+U 1 1 61D19CA2
+P 9900 900
+F 0 "#PWR033" H 9900 750 50  0001 C CNN
+F 1 "VBUS" H 9915 1073 50  0000 C CNN
+F 2 "" H 9900 900 50  0001 C CNN
+F 3 "" H 9900 900 50  0001 C CNN
+	1    9900 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 900  10250 900 
+Wire Wire Line
+	10250 1200 10250 1100
+Connection ~ 10250 900 
+Connection ~ 10250 1000
+Wire Wire Line
+	10250 1000 10250 900 
+Connection ~ 10250 1100
+Wire Wire Line
+	10250 1100 10250 1000
 $EndSCHEMATC
