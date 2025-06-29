@@ -38,6 +38,7 @@
 #define cadence_out 10
 #endif
 
+//For ATTINY best to use the ATTinyCore Universal by SpenceKonde
 #ifdef TINY84
 #define cadence_sensor 8 // This pin must be an interupt pin. For ATTINY84a it is INT0 on Pin 8
 #define torque_sensor 7 // Any analog pin
@@ -45,6 +46,7 @@
 #define throttle 5 // This must be a PWM pin on TIMER1 (pin 5 or 6)
 #endif
 
+//For ATTINY best to use the ATTinyCore Universal by SpenceKonde
 #ifdef TINY85
 #define cadence_sensor 2 // This pin must be an interupt pin. For ATTINY85 it is INT0 on Pin 2
 #define torque_sensor A3 // Any analog pin
@@ -79,8 +81,8 @@
 #define CURRENT_SENSE_MAX_CURRENT MICRO_REFERENCE_VOLTAGE*CURRENT_SENSOR_AMPS_PER_VOLT
 
 //Throttle values
-#define THROTTLE_MIN_VOLTAGE 85u
-#define THROTTLE_MAX_VOLTAGE 205u
+#define THROTTLE_MIN_VOLTAGE 80u
+#define THROTTLE_MAX_VOLTAGE 255u
 
 typedef struct {
     double alpha;
@@ -123,7 +125,7 @@ static unsigned long debug_cadence_rpm = 4;
 /**********************************SETUP************************************************************************/
 void setup() {             
   // initialize the pins.
-  pinMode(cadence_sensor, INPUT_PULLUP);
+  //pinMode(cadence_sensor, INPUT_PULLUP);
   pinMode(torque_sensor, INPUT);
   pinMode(current_sensor, INPUT);
   pinMode(throttle, OUTPUT);
@@ -272,8 +274,8 @@ void loop() {
   delay(3000);
   analogWrite(throttle, 128);
   delay(3000);
-  analogWrite(throttle, 255);
-  delay(1000);
+  analogWrite(throttle, THROTTLE_MAX_VOLTAGE);
+  delay(10000);
 }
 #endif
 
@@ -284,7 +286,11 @@ void loop() {
     //uint16_t cad = map(cadence_RPM, 0, 120, THROTTLE_MIN_VOLTAGE, THROTTLE_MAX_VOLTAGE);
     constrain(cadence_RPM, 0, 30);
     uint16_t cad = map(cadence_RPM, 0, 30, 0, 255);
-    analogWrite(0, cad);
+    if (cad > 1){
+      analogWrite(0, 255);
+    } else {
+      analogWrite(0, cad);
+    }
 }
 #endif
 
